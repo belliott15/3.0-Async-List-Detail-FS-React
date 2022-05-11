@@ -1,18 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from 'react-router-dom';
-import List from './List';
 import Detail from './Detail';
+import Home from './Home';
 
 export default function App() {
-  const [something, setSomething] = useState([]);
-
-
-  
   return (
     <Router>
       <div>
@@ -26,7 +22,7 @@ export default function App() {
 
         <Switch>
           <Route exact path="/list">
-            <List />
+            <Home />
           </Route>
           <Route exact path="/detail">
             <Detail />
