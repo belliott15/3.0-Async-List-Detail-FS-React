@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from 'react-router-dom';
+import List from './List';
+import Detail from './Detail';
 
 export default function App() {
+  const [something, setSomething] = useState([]);
+
+
+  
   return (
     <Router>
       <div>
@@ -18,8 +24,6 @@ export default function App() {
           </ul>
         </nav>
 
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
         <Switch>
           <Route exact path="/list">
             <List />
