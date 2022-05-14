@@ -1,19 +1,19 @@
-import { client } from 'client.js';
+import { client } from './client';
 
-export default async function getSomething(){
+export default async function getPokemon(){
   const { body } = await client
-    .from()
+    .from('pokemon')
     .select();
 
   return body;
 }
 
-export async function getSomethingByID(id){
+export async function getPokemonByID(id){
   const response = await client
-    .from()
+    .from('pokemon')
     .select()
     .match({ id })
     .single();
 
-  return response. body;
+  return response.body;
 }

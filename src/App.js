@@ -21,7 +21,7 @@ export default function App() {
         </nav>
 
         <Switch>
-          <Route exact path="/list">
+          <Route exact path="/">
             <Home />
           </Route>
           <Route exact path="/detail">
