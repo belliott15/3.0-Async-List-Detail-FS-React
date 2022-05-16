@@ -7,11 +7,12 @@ import {
 } from 'react-router-dom';
 import Detail from './Detail';
 import Home from './Home';
+import './App.css';
 
 export default function App() {
   return (
     <Router>
-      <div>
+      <div className='App'>
         <nav>
           <ul>
             <li>
@@ -24,7 +25,7 @@ export default function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route exact path="/detail">
+          <Route exact path="/detail/:id">
             <Detail />
           </Route>
         </Switch>

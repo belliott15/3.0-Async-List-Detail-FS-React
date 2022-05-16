@@ -1,3 +1,7 @@
+body{
+  background: linear-gradient(to right, red, white, black);
+}
+
 .App {
   text-align: center;
 }
@@ -5,6 +9,10 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+li{
+  list-style: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -35,4 +43,34 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.poke-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.poke-card{
+  color: black;
+  border: 4px gold inset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+  padding: 20px;
+  text-decoration: none;
+  width: 200px;
+  height: 300px;
+}
+
+.poke-card h4{
+  margin: 5px;
+}
+
+.poke-card h1, h4{
+  text-decoration: none;
 }

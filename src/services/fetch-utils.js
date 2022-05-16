@@ -1,11 +1,15 @@
 import { client } from './client';
 
-export default async function getPokemon(){
-  const { body } = await client
+export default async function getPokemon(start, end){
+  const numberPerPage = 25;
+  const response = await client
     .from('pokemon')
-    .select();
+    .select('*', { count: 'exact' })
+    .range(start, end);
 
-  return body;
+  const lastPage = Math.ceil(response.count / numberPerPage);
+
+  return { ...response, lastPage };
 }
 
 export async function getPokemonByID(id){
