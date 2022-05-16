@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function Pokemon({ poke }) {
   return (
     <div>
-      <Link to={`/detail/${poke.id}`} className='link' >
+      <Link to={`/detail/${poke.pokemon_id}`} className='link' >
         <div className="poke-card" style={{ 
           background: poke.legendary && '#FFD700'
           || poke.type1 === 'Water' && '#0b8ca3'

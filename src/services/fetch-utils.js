@@ -5,7 +5,8 @@ export default async function getPokemon(start, end){
   const response = await client
     .from('pokemon')
     .select('*', { count: 'exact' })
-    .range(start, end);
+    .range(start, end)
+    .order('id', { ascending: true });
 
   const lastPage = Math.ceil(response.count / numberPerPage);
 
@@ -16,7 +17,7 @@ export async function getPokemonByID(id){
   const response = await client
     .from('pokemon')
     .select()
-    .match({ id })
+    .match({ pokemon_id: id })
     .single();
 
   return response.body;

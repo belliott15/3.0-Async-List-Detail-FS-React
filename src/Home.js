@@ -8,7 +8,7 @@ export default function Home() {
   const [pokemon, setPokemon] = useState([]);
   const [page, setPage] = useState(1);
   const [lastPage, setLastPage] = useState();
-  const pokemonPerPage = 25;
+  const pokemonPerPage = 24;
 
   useEffect(() => {
     async function allPokemon(){
